@@ -1,9 +1,5 @@
 #!/bin/sh
 
-# start the virtuoso service
-echo "starting virtuoso …"
-service virtuoso-opensource-6.1 start
-
 # start the php5-fpm service
 echo "starting php …"
 service php5-fpm start

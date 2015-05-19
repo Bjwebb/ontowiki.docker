@@ -11,11 +11,11 @@ RUN apt-get update
 
 # install some basic packages
 # install the nginx server with PHP
-# install virtuoso
+# install virtuoso odbc driver
 RUN apt-get install -y \
     git make curl \
     nginx-light php5-fpm php5-odbc php5-curl \
-    virtuoso-opensource
+    libvirtodbc0
 
 # clone ontowiki and get its dependencies
 RUN git clone https://github.com/AKSW/OntoWiki.git /var/www/
