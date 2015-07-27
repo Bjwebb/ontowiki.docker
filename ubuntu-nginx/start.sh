@@ -1,5 +1,9 @@
 #!/bin/sh
 
+if [ $VIRTUOSO_PASSWORD ]; then
+    /bin/sed -i "s|store.virtuoso.password    = \"dba\"|store.virtuoso.password    = \"$VIRTUOSO_PASSWORD\"|" /var/www/config.ini
+fi
+
 # start the php5-fpm service
 echo "starting php …"
 service php5-fpm start
